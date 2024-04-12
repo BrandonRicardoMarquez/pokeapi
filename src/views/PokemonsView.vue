@@ -17,7 +17,7 @@ import { ref } from 'vue';
 </script>
 
 <template>
-    <h1>Pokemons vamo a guja papu</h1>
+    <h1>Pokemons</h1>
     <ul>
         <li v-for="(poke,index) in pokemons" :key="index">
             {{ poke.name }}
