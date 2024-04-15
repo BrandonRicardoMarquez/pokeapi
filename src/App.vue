@@ -33,9 +33,10 @@ import HelloWorld from './components/HelloWorld.vue'
           <RouterLink to="/Pokemons">Pokemons</RouterLink>
         </li>
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" width="300">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="" role="search">
+        <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+
       </form>
     </div>
   </div>
