@@ -24,9 +24,9 @@ import {RouterLink} from 'vue-router'
             <router-link :to="`/pokemons/${poke.name}`">
                 {{ poke.name }}
             </router-link>
-            <router-link :to="`/pokemons/${poke.url}`">
+            <!-- <router-link :to="`/pokemons/${poke.url}`">
                 {{ poke.url }}
-            </router-link>
+            </router-link> -->
         </li>
     </ul>
 </template>
