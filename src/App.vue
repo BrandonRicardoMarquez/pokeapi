@@ -4,8 +4,50 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img alt="Vue logo" 
+        class="logo" 
+        src="@/assets/logo.svg" 
+        width="30" 
+        height="24" 
+      />
+    </a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <RouterLink to="/">Home</RouterLink>
+        </li>
+        <li class="nav-item dropdown">
+          <RouterLink to="/about">About</RouterLink>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <RouterLink to="/Pokemons">Pokemons</RouterLink>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" width="300">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+  </nav>
+</header>
+  <!-- <header>
+    <img alt="Vue logo" 
+    class="logo" 
+    src="@/assets/logo.svg" 
+    width="125" 
+    height="125" 
+    />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -16,8 +58,8 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/Pokemons">Pokemons</RouterLink>
       </nav>
     </div>
-  </header>
-
+  </header> -->
+<br>
   <RouterView />
 </template>
 

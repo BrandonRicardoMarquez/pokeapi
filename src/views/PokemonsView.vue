@@ -19,6 +19,7 @@ import {RouterLink} from 'vue-router'
 
 <template>
     <h1>Pokemons</h1>
+    <br>
     <ul>
         <li v-for="(poke,index) in pokemons" :key="index">
             <router-link :to="`/pokemons/${poke.name}`">
