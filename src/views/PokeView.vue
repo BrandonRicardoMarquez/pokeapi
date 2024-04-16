@@ -19,6 +19,7 @@ import { ref } from 'vue';
             poke.value = data;
         } catch (error) {
             console.log(error);
+            poke.value = null;
         }
     }
 
@@ -26,7 +27,7 @@ getData()
 </script>
 <template>
 
-<div class="container">
+<div class="container" v-if=poke>
   <div class="row">
     <div class="col-6 col-sm-4">
         <h3>Poke name: <br/> {{ $route.params.name }}</h3>
@@ -46,6 +47,7 @@ getData()
     </div>
   </div>
 </div>
+<h1 v-else>Hijo yo creo que no se va poder</h1>
 <div class="container">
     <div class="text-center">
         <button @click="back" class="btn btn-primary btn-block">POKEAPI</button>
