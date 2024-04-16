@@ -29,7 +29,7 @@ getData()
 <div class="container">
   <div class="row">
     <div class="col-6 col-sm-4">
-        <h3>Poke name: {{ $route.params.name }}</h3>
+        <h3>Poke name: <br/> {{ $route.params.name }}</h3>
     </div>
     <div class="col-6 col-sm-3">
         <h3>Datos:</h3>
@@ -44,7 +44,11 @@ getData()
     <div class="col-6 col-sm-8">
         <h6>{{ poke.abilities}}</h6>
     </div>
-    <button @click="back" class="btn btn-primary">POKEAPI</button>
   </div>
+</div>
+<div class="container">
+    <div class="text-center">
+        <button @click="back" class="btn btn-primary btn-block">POKEAPI</button>
+    </div>
 </div>
 </template>

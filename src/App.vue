@@ -11,32 +11,31 @@ import HelloWorld from './components/HelloWorld.vue'
       <img alt="Vue logo" 
         class="logo" 
         src="@/assets/logo.svg" 
-        width="30" 
-        height="24" 
+        width="100" 
+        height="44" 
       />
     </a>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/" class="btn btn-outline-primary">Home  </RouterLink>
         </li>
         <li class="nav-item dropdown">
-          <RouterLink to="/about">About</RouterLink>
-          <ul class="dropdown-menu">
+          <RouterLink to="/about" class="btn btn-outline-danger">About  </RouterLink>
+          <!-- <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li class="nav-item">
-          <RouterLink to="/Pokemons">Pokemons</RouterLink>
+          <RouterLink to="/Pokemons" class="btn btn-outline-warning">Pokemons</RouterLink>
         </li>
       </ul>
-      <form class="" role="search">
+      <form class="d-flex" role="search">
         <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-
+        <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
   </div>
@@ -61,10 +60,12 @@ import HelloWorld from './components/HelloWorld.vue'
     </div>
   </header> -->
 <br>
+<div class="container">
   <RouterView />
+</div>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -126,4 +127,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+</style> -->
