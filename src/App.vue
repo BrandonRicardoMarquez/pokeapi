@@ -5,7 +5,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
 <header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-dark narbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img alt="Vue logo" 
@@ -18,10 +18,10 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <RouterLink to="/" class="btn btn-outline-primary">Home  </RouterLink>
+          <RouterLink to="/" class="btn btn-outline-primary me-2">Home  </RouterLink>
         </li>
         <li class="nav-item dropdown">
-          <RouterLink to="/about" class="btn btn-outline-danger">About  </RouterLink>
+          <RouterLink to="/about" class="btn btn-outline-danger me-2">About  </RouterLink>
           <!-- <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Action</a></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -34,8 +34,8 @@ import HelloWorld from './components/HelloWorld.vue'
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search" >
+        <button class="btn btn-outline-success" type="submit" @click="getData(data.name)" :to="`/pokemons/pikachu`">Search</button>
       </form>
     </div>
   </div>
