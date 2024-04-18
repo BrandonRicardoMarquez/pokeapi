@@ -3,9 +3,15 @@
     // import { ref } from 'vue';
     import {useRoute, useRouter} from "vue-router"
     import { useGetData} from '@/composables/getData'
+    import {useFavoritosStore} from '@/store/favoritos'
+    
 
     const route = useRoute()
     const router = useRouter()
+    const useFavoritos = useFavoritosStore()
+    
+
+    const {add} = useFavoritos
 
     const {getData, data, loading, error } = useGetData();
 
@@ -35,6 +41,7 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
   <div class="row">
     <div class="col-6 col-sm-4 ">
         <h3>Poke name: <br/> {{ $route.params.name }}</h3>
+        <button class="btn btn-primary btn-block mt-3" @click="add(data)">Agregar Favoritos</button>
     </div>
     <div class="col-6 col-sm-3">
         <h3>Datos:</h3>

@@ -30,7 +30,10 @@ import HelloWorld from './components/HelloWorld.vue'
           </ul> -->
         </li>
         <li class="nav-item">
-          <RouterLink to="/Pokemons" class="btn btn-outline-warning">Pokemons</RouterLink>
+          <RouterLink to="/Pokemons" class="btn btn-outline-warning me-2">Pokemons</RouterLink>
+        </li>
+        <li class="nav-item">
+          <RouterLink to="/favoritos" class="btn btn-outline-light">Favoritos</RouterLink>
         </li>
       </ul>
       <form class="d-flex" role="search">
