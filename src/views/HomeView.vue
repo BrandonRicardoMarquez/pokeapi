@@ -4,6 +4,9 @@ const useCounter = useCounterStore ()
 </script>
 
 <template>
-    <h1>🍔 HOME 🍔 <br> counter: {{ useCounter.count }}</h1> 
+  <div class="container bg-white text-center">
+    <h1>🍔 HOME 🍔 <br> Counter: {{ useCounter.count }}</h1>
+    <h2>Double: {{ useCounter.double }}</h2> 
     <button @click="useCounter.increment" class="btn btn-success">Incrementar</button>
+  </div>
 </template>
