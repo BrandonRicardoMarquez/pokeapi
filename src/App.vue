@@ -1,6 +1,16 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+// import { RouterLink, useRouter } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function handleSearch(event) {
+  event.preventDefault()
+  const searchTerm = event.target.querySelector('input').value
+  // Redirigir a la página 'PokeView' con el parámetro de búsqueda
+  router.push({ name: 'poke', params: { name: searchTerm } })
+}
 </script>
 
 <template>
@@ -36,9 +46,9 @@ import HelloWorld from './components/HelloWorld.vue'
           <RouterLink to="/favoritos" class="btn btn-outline-light">Favoritos</RouterLink>
         </li>
       </ul>
-      <form class="d-flex" role="search">
+      <form class="d-flex" role="search" @submit.prevent="handleSearch">
         <input class="form-control me-10" type="search" placeholder="Search" aria-label="Search" >
-        <button class="btn btn-outline-success" type="submit" @click="getData(data.name)" :to="`/pokemons/pikachu`">Search</button>
+        <button class="btn btn-outline-success" type="submit" >Search</button>
       </form>
     </div>
   </div>
