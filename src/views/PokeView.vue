@@ -40,7 +40,9 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
 <div class="container bg-white " v-if=data>
   <div class="row">
     <div class="col-6 col-sm-4 ">
-        <h3>Poke name: <br/> {{ $route.params.name }}</h3>
+        <h3>Poke name: <br/> 
+            <!-- {{ $route.params.name }}  -->
+            {{ data.name }}</h3>
         
     </div>
     <div class="col-6 col-sm-3">
