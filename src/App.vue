@@ -1,9 +1,8 @@
 <script setup>
-// import { RouterLink, useRouter } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { useRouter } from 'vue-router'
 
-const router = useRouter()
+const router = useRouter();
 
 function handleSearch(event) {
   event.preventDefault()

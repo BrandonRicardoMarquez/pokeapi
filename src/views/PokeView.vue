@@ -41,7 +41,7 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
   <div class="row">
     <div class="col-6 col-sm-4 ">
         <h3>Poke name: <br/> {{ $route.params.name }}</h3>
-        <button :disabled="findPoke(data.name)" class="btn btn-primary btn-block mt-3" @click="add(data)">Agregar Favoritos</button>
+        
     </div>
     <div class="col-6 col-sm-3">
         <h3>Datos:</h3>
@@ -53,14 +53,31 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
     <div class="col-6 col-sm-3">
         <img :src="data.sprites?.front_default" alt="">
     </div>
-    <div class="col-6 col-sm-8">
-        <h6>{{ data.abilities}}</h6>
+    <div class="col-6 col-sm-8" >
+        <ul class="list-group">
+            <h2>Type:</h2>
+            <li class="list-group-item" v-for="(type,index) in data.types" :key="index" :class="type.type.name ">
+                <span>{{ type.type.name}} </span>
+            </li>
+        </ul>
+        <ul class="list-group">
+            <h2>Stats:</h2>
+                <li class="list-group-item"
+                v-for="(stat, key) in data.stats"
+                :key="key"
+                >
+                <span>{{ stat.stat.name}} -> {{stat.base_stat }}</span>
+                
+                </li>
+                <button :disabled="findPoke(data.name)" class="btn btn-primary btn-block mt-3" @click="add(data)">Agregar Favoritos</button> <br>
+        </ul>
+        <!-- <span>{{ type.type.name}} </span> -->
     </div>
   </div>
 </div>
 <div class="container">
     <div class="text-center">
-        <button @click="back" class="btn btn-primary btn-block">POKEAPI</button>
+        <button @click="back" class="btn btn-primary btn-block me-2">POKEAPI</button>
     </div>
 </div>
 </template>
