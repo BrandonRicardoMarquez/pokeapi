@@ -8,7 +8,9 @@ function handleSearch(event) {
   event.preventDefault()
   const searchTerm = event.target.querySelector('input').value
   // Redirigir a la página 'PokeView' con el parámetro de búsqueda
+
   router.push({ name: 'poke', params: { name: searchTerm } })
+  
 }
 </script>
 

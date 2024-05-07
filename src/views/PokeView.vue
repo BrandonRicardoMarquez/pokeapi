@@ -1,15 +1,15 @@
 <script setup>
     // import axios from 'axios';
-    // import { ref } from 'vue';
+    //  import { ref,watch } from 'vue';
     import {useRoute, useRouter} from "vue-router"
     import { useGetData} from '@/composables/getData'
     import {useFavoritosStore} from '@/store/favoritos'
+    import { watch } from 'vue' // Importa watch de 'vue'
     
 
     const route = useRoute()
     const router = useRouter()
     const useFavoritos = useFavoritosStore()
-    
 
     const {add, findPoke} = useFavoritos
 
@@ -32,7 +32,13 @@
     //     }
     // }
 
-getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
+
+    watch(route, (ewX) => {
+        getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
+    })
+    getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
+  // Observa cambios en la ruta y llama a la función watchRouteChanges
+ 
 </script>
 <template>
 <p v-if="loading">Estoy cargando hehehe </p>
@@ -46,7 +52,7 @@ getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
         
     </div>
     <div class="col-6 col-sm-3">
-        <h3>Datos:</h3>
+        <h3>Datos: </h3> 
     </div>
 
     <!-- Force next columns to break to new line -->
