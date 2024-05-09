@@ -33,7 +33,7 @@
     // }
 
 
-    watch(route, (ewX) => {
+    watch(route, () => {
         getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
     })
     getData(`https://pokeapi.co/api/v2/pokemon/${route.params.name}`)
